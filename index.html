@@ -512,22 +512,23 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6 offset-md-3">
-					<div class="row form-area">
+					<div class="row form-area contact_form">
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Name">
+								<input type="text" class="form-control name" placeholder="Name">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="email" class="form-control" placeholder="Email">
+								<input type="email" class="form-control email" placeholder="Email">
 							</div>
 						</div>
 						<div class="col-md-12 subject-area">
-							<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+							<input type="text" class="form-control subject" id="subject" name="subject"
+								placeholder="Subject">
 						</div>
 						<div class="col-md-12">
-							<textarea class="form-control message-area" id="message" name="message" rows="6"
+							<textarea class="form-control message message-area" id="message" name="message" rows="6"
 								placeholder="Your Message ..."></textarea>
 						</div>
 						<div class="col-md-12">
@@ -593,9 +594,36 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 	<!-- All Active Main.Js -->
 	<script src="assets/js/main.js"></script>
+
+
+	<!-- SMTP Contact form -->
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+		const form = document.querySelector('.contact_form');
+
+		function sendMsg(e) {
+			e.preventDefault();
+
+			const name = document.querySelector('.name'),
+				email = document.querySelector('.email'),
+				subject = document.querySelector('.subject'),
+				message = document.querySelector('.message')
+
+			// Functionality
+			Email.send({
+				SecureToken: "b7df1d63-4286-4dc8-bd79-9d8dc69a3f24 ",
+				To: 'nahidthenh@gmail.com',
+				From: email.value,
+				Subject: "This is the subject",
+				Body: message.value
+			}).then(
+				message => alert(message)
+			);
+		}
+
+		// add event lis 
+		form.addEventListener('submit', sendMsg);
+	</script>
 </body>
 
 </html>
-
-
-<!-- https://preview.themeforest.net/item/spirit-portfolioresume-html-template-for-developers-programmers-and-freelancers/full_screen_preview/17094383 -->
