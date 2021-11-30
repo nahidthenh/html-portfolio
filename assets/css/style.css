@@ -662,6 +662,7 @@ p.footer-text a:hover {
     /* box-shadow: 0 1px 4px rebeccapurple; */
     padding: 5px 10px;
     margin-right: 10px;
+    margin-bottom: 10px;
     border-radius: 3px;
     color: #000;
     border: 1px solid #fff;
