@@ -19,10 +19,10 @@ $(document).ready(
                 e.ripples("drop", o, a, 20, t);
             }, 800),
             r(".html").rProgressbar({ percentage: 90, fillBackgroundColor: "#2BA8E0" }),
-            r(".css").rProgressbar({ percentage: 85, fillBackgroundColor: "#2BA8E0" }),
-            r(".bootstrap").rProgressbar({ percentage: 80, fillBackgroundColor: "#2BA8E0" }),
-            r(".php").rProgressbar({ percentage: 45, fillBackgroundColor: "#2BA8E0" }),
-            r(".jquery").rProgressbar({ percentage: 70, fillBackgroundColor: "#2BA8E0" }),
+            r(".psd").rProgressbar({ percentage: 80, fillBackgroundColor: "#2BA8E0" }),
+            r(".bootstrap").rProgressbar({ percentage: 85, fillBackgroundColor: "#2BA8E0" }),
+            r(".mern").rProgressbar({ percentage: 35, fillBackgroundColor: "#2BA8E0" }),
+            r(".wordpress").rProgressbar({ percentage: 70, fillBackgroundColor: "#2BA8E0" }),
             r(".count-num").rCounter({ duration: 50 });
         mixitup(".protfulio-content");
         r(".image-link").magnificPopup({ type: "image" });
